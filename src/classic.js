@@ -56,8 +56,8 @@ export default class ClassicEditor extends StandardEditor {
 		this.updateEditorElement();
 		this._elementReplacer.restore();
 
-		return this.ui.destroy()
-			.then( () => super.destroy() );
+		return super.destroy()
+			.then( () => this.ui.destroy() );
 	}
 
 	/**
