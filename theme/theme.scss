@@ -8,6 +8,25 @@
 	// If any element needs to be positioned with respect to the <body>, etc.,
 	// it must land outside of the `.ck-editor` in DOM.
 	position: relative;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.ck-editor__top {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.ck-editor__main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .ck-editor__top .ck-sticky-panel {
