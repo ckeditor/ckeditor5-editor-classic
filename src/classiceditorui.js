@@ -165,7 +165,8 @@ export default class ClassicEditorUI extends EditorUI {
 	 */
 	_initPlaceholder() {
 		const editor = this.editor;
-		const editingView = editor.editing.view;
+		const editing = editor.editing;
+		const editingView = editing.view;
 		const editingRoot = editingView.document.getRoot();
 		const sourceElement = editor.sourceElement;
 
@@ -174,7 +175,7 @@ export default class ClassicEditorUI extends EditorUI {
 
 		if ( placeholderText ) {
 			enablePlaceholder( {
-				view: editingView,
+				editing,
 				element: editingRoot,
 				text: placeholderText,
 				isDirectHost: false
